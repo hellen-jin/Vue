@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-if根据表达值的真假，切换元素的显示和隐藏 -->
+        <p v-if="true">我是一个标签</p><br>
+        <input type="button" value="change" @click="changeIsShow">
+        <!-- 本质通过操控dom元素来切换显示状态 -->
+        <!-- 频繁切换用show，不频繁用if -->
+        <p v-if="isShow">我是一个标签</p>
+        <p v-show="isShow">我是一个标签</p>
+        <p v-if="tempurature>35">我好热</p>
+        
+    </div>
+     <!-- vue导入,开发环境版本包含了有帮助的命令行警告 -->
+     <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+     <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                isShow:false,
+                tempurature:40
+            },
+            methods:{
+                changeIsShow:function(){
+                    this.isShow=!this.isShow
+                }
+            }
+        })
+     </script>       
+</body>
+</html>

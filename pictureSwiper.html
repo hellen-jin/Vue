@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper</title>
+    
+    <style>
+        .banner-card {
+            width: 100%;
+            height: 250px;
+            line-height: 250px;
+            background: #ffffff;
+            position: relative;
+        }
+        .banner-card ul {
+            width: 700px;
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .banner-card li {
+           width: 150px;
+           height: 200px;
+           position: absolute;
+           top: 25px;
+           list-style-type: none;
+           -webkit-transition: 0.3s;
+           -moz-transition: 0.3s;
+           -ms-transition: 0.3s;
+           -o-transition: 0.3s;
+           transition: 0.3s;
+           cursor: pointer;
+        }
+        .banner-card li img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .one {
+            z-index: 1;
+            left: 75px;
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+        
+        .two {
+            z-index: 2;
+            left: 175px;
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -o-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+        .three {
+            z-index: 3;
+            left: 275px;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+        }
+        .four {
+           z-index: 2;
+           left: 375px;
+           -webkit-transform: scale(0.9);
+           -moz-transform: scale(0.9);
+           -ms-transform: scale(0.9);
+           -o-transform: scale(0.9);
+           transform: scale(0.9);
+        }
+        .five {
+           left: 475px;
+           z-index: 1;
+           -webkit-transform: scale(0.8);
+           -moz-transform: scale(0.8);
+           -ms-transform: scale(0.8);
+           -o-transform: scale(0.8);
+           transform: scale(0.8);
+        }
+        
+        .banner-card div {
+            transition: 0.3s;
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .banner-card div span {
+           display: inline-block;
+           font-size: 25px;
+        }
+        
+        .left-btn {
+           left: 20px;
+        }
+        .right-btn {
+           right: 20px;
+        }
+        
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="banner-card">
+        <ul class="ul">
+            <li><img src="/picture/将雪逾冬.jpeg" alt=""></li>
+            <li><img src="/picture/局部麻醉.jpeg" alt=""></li>
+            <li><img src="/picture/幼年查查.jpeg" alt=""></li>
+            <li><img src="/picture/情热.jpeg" alt=""></li>
+            <li><img src="/picture/钻石之心.jpeg" alt=""></li>
+        </ul>
+        <div class="left-btn">
+            <span><</span>
+        </div>
+        <div class="right-btn">
+            <span>></span>
+        </div>
+    </div>
+
+    <div id="carousel-app"></div>
+
+    <script>
+        // Existing JavaScript code here
+        
+        new Vue({
+            el: '#carousel-app',
+            template: `
+                <el-carousel :interval="4000" type="card" height="200px">
+                    <el-carousel-item v-for="item in 6" :key="item">
+                        <h3 text="2xl" justify="center">{{ item }}</h3>
+                    </el-carousel-item>
+                </el-carousel>
+            `,
+        });
+    </script>
+</body>
+</html>

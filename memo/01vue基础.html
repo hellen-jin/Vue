@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+        <h3> {{　school.name　}} {{school.phoneNumber }}</h3>
+        <ul>
+            <li>{{campus[0]}}</li>
+            <li>{{campus[2]}}</li>
+        </ul>
+    </div>
+     <!-- vue导入,开发环境版本包含了有帮助的命令行警告 -->
+     <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+    <script>
+        var app = new Vue({
+            //vue会管理el选项命中的元素及其内部的后代元素
+            //实际开发通常使用ID选择器，因其唯一性，类和标签选择器通常都可命名多个元素，因此不太考虑
+            //可用于其他双标钱，但不可用于html和body
+            el:"#app", 
+            //el:".app",
+            //el:"div",
+
+            //data数据对象
+            data:{
+                message:"hello vue",
+                school:{
+                    name:"babe school",
+                    phoneNumber: "080-111-1111"
+                },
+                campus:["shanghai","beijing","nanjing"]
+            }
+
+            })
+    </script>
+</body>
+</html>

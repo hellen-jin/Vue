@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @click="minus">-</button>
+        <span>{{number}}</span>
+        <button @click="plus">+</button>
+    </div>
+     <!-- vue导入,开发环境版本包含了有帮助的命令行警告 -->
+     <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>     
+     <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                number:0 
+            },
+            methods:{
+                plus:function(){
+                    if(this.number<5){
+                    console.log("plus")
+                    this.number ++
+                }else{
+                    alert("warning")
+                }
+            },
+                minus:function(){
+                    if(this.number>0){
+                    console.log("minus")
+                    this.number --
+                }else{
+                    alert('warning')
+                }
+
+                },
+                
+            }
+        })
+     </script>
+</body>
+</html>

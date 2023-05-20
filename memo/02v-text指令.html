@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-text</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-text设置标签的内容 -->
+        <!-- 只有{{}}里的yes显示 -->
+        <h2 v-text="message + '!'">yes</h2>
+        <h2 v-text="info + message">yes</h2> 
+        {{message}}yes 
+    </div>
+     <!-- vue导入,开发环境版本包含了有帮助的命令行警告 -->
+     <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+     <script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                message:'hello',  
+                info:"education"
+            }
+
+        }) 
+
+     </script>
+     
+</body>
+</html>
