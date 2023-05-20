@@ -1,6 +1,7 @@
 # Vue
-Vue代码存档
+Vue代码存档  
 
+GitHub clone方法    
 //终端 选择下载的路径  
 cd ~/Desktop  
 //github 复制SSH  
