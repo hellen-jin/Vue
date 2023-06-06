@@ -1,5 +1,5 @@
 # Vue
-Vue代码存档  
+basic github usage 
 
 GitHub clone方法    
 //终端 选择下载的路径  
